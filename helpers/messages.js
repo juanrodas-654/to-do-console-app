@@ -1,9 +1,7 @@
 const colors = require('colors');
 const { resolve } = require('path');
 
-
-const showMenu = () =>{
-
+ const showMenu = () =>{
         return new Promise(resolve=>{
             console.clear();
    
@@ -19,9 +17,7 @@ const showMenu = () =>{
             console.log(`${'5.'.green} Completar tarea(s)`);
             console.log(`${'6.'.green} Borrar tarea`);
             console.log(`${'7.'.green} Salir\n`);
-        
-        
-        
+
             const readline = require('readline').createInterface({
                 input: process.stdin,
                 output: process.stdout
@@ -35,8 +31,6 @@ const showMenu = () =>{
   
     
 }
-
-
 const pausa = () => {
     return new Promise( resolve => {
         const readline = require('readline').createInterface({
@@ -49,8 +43,4 @@ const pausa = () => {
             resolve(opt);
         })
     })
-}
-module.exports = { 
-    showMenu, 
-    pausa
-}
+} 
